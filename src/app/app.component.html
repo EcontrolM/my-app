@@ -1,0 +1,17 @@
+<h1 i18n>Test</h1>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+           <app-alert></app-alert>
+           <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<template ngFor let-lang [ngForOf]="languages">
+  <span *ngIf="lang.code !== localeId"> 
+  	<a href="../{{lang.code}}/">{{lang.label}}</a> 
+  </span>
+  <span *ngIf="lang.code === localeId">{{lang.label}} </span>
+</template>
