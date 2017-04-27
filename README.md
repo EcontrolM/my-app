@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
+# Git
+    git config user.name "Econtrol M"
+    git config user.email "ecntrl@gmail.com"
+
+    git clone git@github.com:EcontrolM/my-app.git
+
+# Angular4
+    npm install @angular/{common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations}@latest typescript@latest --save 
+
+    npm install --save-dev @angular/cli@latest
+
 ## Development server
 
 Run `npm install` to initialize the project

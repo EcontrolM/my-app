@@ -1,8 +1,7 @@
-<div *ngIf="message" 
-[ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
-<ng-container [ngSwitch]="message.text">
-<ng-container *ngSwitchCase="'Login failed'" i18n>Login failed</ng-container>
-<ng-container *ngSwitchCase="'Welcome'" i18n>Welcome</ng-container>
-<ng-container *ngSwitchDefault>Not translated: {{message.type}}: {{message.text}}</ng-container>
-</ng-container>
-</div>
+<ngb-alert *ngIf="message" [type]="message.type === 'error' ? 'danger' : 'success'" (close)="closeAlert()">
+    <ng-container [ngSwitch]="message.text">
+        <ng-container *ngSwitchCase="'Login failed'" i18n>Login failed</ng-container>
+        <ng-container *ngSwitchCase="'Welcome'" i18n>Welcome</ng-container>
+        <ng-container *ngSwitchDefault>Not translated: {{message.type}}: {{message.text}}</ng-container>
+    </ng-container>
+</ngb-alert>
